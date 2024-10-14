@@ -1,0 +1,8 @@
+{
+"#" : "Load from the default configuration",
+    "ParentConfig": "https://digitalhuman.uk/conf/alex.json",
+    "#": "---------------- Subtitles ---------------",
+    "Subtitle" : {
+      "Enabled" : false
+    }
+}
