@@ -1,4 +1,4 @@
 {"#":"------------- Avatar Details ---------------","Avatar":
   {"TTSService": "Azure",
-    "TTSVoice": "AaravNeural",
+    "TTSVoice": "hi-IN-AaravNeural",
     "AzureLanguage": "hi-IN"},"ParentConfig":"/conf/alex.json"}
