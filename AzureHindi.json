@@ -1,1 +1,4 @@
-{"#":"------------- Avatar Details ---------------","Avatar":{"TTSVoice":"MatthewNTTS","TTSService":"azure","AzureLanguage":"hi-IN"},"ParentConfig":"/conf/alex.json"}
+{"#":"------------- Avatar Details ---------------","Avatar":
+  {"TTSService": "Azure",
+    "TTSVoice": "en-IN-PrabhatNeural",
+    "AzureLanguage": "en-IN"},"ParentConfig":"/conf/alex.json"}
