@@ -1,4 +1,4 @@
 {"#":"------------- Avatar Details ---------------","Avatar":
   {"TTSService": "Azure",
-    "TTSVoice": "en-US-EmmaMultilingualNeural",
+    "TTSVoice": "en-US-AvaMultilingualNeural",
     "AzureLanguage": "en-US"},"ParentConfig":"/conf/ava.json"}
