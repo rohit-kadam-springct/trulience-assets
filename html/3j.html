@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Three.js Avatar Scene with Import Map</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+      canvas {
+        display: block;
+      }
+      #reload-btn {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 999;
+      }
+    </style>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://threejs.org/build/three.module.js",
+          "three/addons/": "https://threejs.org/examples/jsm/"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div
+      id="timer"
+      style="position: absolute; top: 10px; right: 10px; z-index: 999"
+    >
+      00
+    </div>
+    <button id="reload-btn" onclick="location.reload()">Reload Page</button>
+
+    <script type="module">
+      import * as THREE from "three";
+      import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+      import { MeshoptDecoder } from "three/addons/libs/meshopt_decoder.module.js"; // Import the meshopt decoder
+
+      let scene, camera, renderer, clock, mixer;
+      let avatar, environment;
+
+      init();
+      animate();
+
+      function init() {
+        // Create the scene
+        scene = new THREE.Scene();
+
+        // Set up the camera
+        camera = new THREE.PerspectiveCamera(
+          40, // Field of view
+          window.innerWidth / window.innerHeight, // Aspect ratio
+          0.1, // Near plane
+          100 // Far plane
+        );
+        camera.position.set(0, 1.67, 3); // Camera slightly above ground
+
+        // Set up the renderer
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.shadowMap.enabled = true;
+        renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+        document.body.appendChild(renderer.domElement);
+
+        // Add a clock for animation updates
+        clock = new THREE.Clock();
+
+        // Add ambient light
+        const ambientLight = new THREE.HemisphereLight(0xffffff, 0x444444, 1);
+        scene.add(ambientLight);
+
+        // Add directional light with shadows
+        const directionalLight = new THREE.DirectionalLight(0xf0f7ff, 3);
+        directionalLight.position.set(-0.8, 0.86, 0.72);
+        directionalLight.castShadow = true;
+        directionalLight.shadow.mapSize.width = 2048;
+        directionalLight.shadow.mapSize.height = 2048;
+        scene.add(directionalLight);
+
+        // Shadow catcher plane
+        const shadowCatcher = new THREE.Mesh(
+          new THREE.PlaneGeometry(10, 10),
+          new THREE.ShadowMaterial({ opacity: 0.4 })
+        );
+        shadowCatcher.rotation.x = -Math.PI / 2;
+        shadowCatcher.receiveShadow = true;
+        scene.add(shadowCatcher);
+
+        // Load environment model
+        const envLoader = new GLTFLoader();
+        envLoader.load(
+          "https://digitalhuman.uk/assets/environments/FootballStadium.glb",
+          (gltf) => {
+            environment = gltf.scene;
+            environment.position.set(0, 0, 0);
+            scene.add(environment);
+
+            // Load avatar after environment is ready
+            loadAvatar();
+          },
+          undefined,
+          (error) => console.error("Error loading environment:", error)
+        );
+
+        // Handle window resize
+        window.addEventListener("resize", onWindowResize);
+      }
+
+      function loadAvatar() {
+        const loader = new GLTFLoader();
+        loader.setMeshoptDecoder(MeshoptDecoder); // Set the meshopt decoder
+        loader.load(
+          "https://digitalhuman.uk/assets/characters/Alex_Decimated/Alex_Rigged.gltf",
+          (gltf) => {
+            avatar = gltf.scene;
+            avatar.position.set(0, 0, 0);
+
+            // Enable shadows on the avatar
+            avatar.traverse((node) => {
+              if (node.isMesh) {
+                node.castShadow = true;
+                node.receiveShadow = true;
+              }
+            });
+            scene.add(avatar);
+
+            // Set up animation mixer
+            mixer = new THREE.AnimationMixer(avatar);
+            const idleAction = mixer.clipAction(gltf.animations[0]); // Assuming first animation is coreIdle9
+            idleAction.play();
+          },
+          undefined,
+          (error) => console.error("Error loading avatar:", error)
+        );
+      }
+
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+
+      function animate() {
+        requestAnimationFrame(animate);
+
+        // Update animation mixer if available
+        if (mixer) {
+          const delta = clock.getDelta();
+          mixer.update(delta);
+        }
+
+        // Render the scene
+        renderer.render(scene, camera);
+      }
+
+      // Start time at page load
+      const startTime = new Date();
+
+      // Function to update the timer every second
+      function updateTimer() {
+        const now = new Date();
+        const elapsedSeconds = Math.floor((now - startTime) / 1000); // Convert ms to seconds
+
+        document.getElementById("timer").textContent = elapsedSeconds;
+      }
+
+      // Update the timer every 1 second (1000ms)
+      setInterval(updateTimer, 1000);
+    </script>
+  </body>
+</html>

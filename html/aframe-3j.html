@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.5.1/dist/aframe-extras.min.js"></script>
+    <script src="//cdn.rawgit.com/mrdoob/three.js/r137/examples/js/loaders/RGBELoader.js"></script>
+  </head>
+  <body>
+    <!-- Add buttons to toggle visibility -->
+    <div style="position: absolute; top: 10px; left: 10px; z-index: 999">
+      <button onclick="window.location.href=window.location.href">
+        Reload Page
+      </button>
+    </div>
+
+    <div id="timer" style="position: absolute; top: 10px; right: 10px; z-index: 999">00</div>
+
+    <a-scene
+      id="a-scene"
+      shadow="type: pcf; autoUpdate: true"
+      stats="enabled: true"
+      renderer="colorManagement: true; physicallyCorrectLights: true; antialias: true"
+      light="defaultLightsEnabled: false"
+      loading-screen="enabled: false"
+      device-orientation-permission-ui="enabled: false"
+      powerpreference="high-performance"
+      style="width: 100%; height: 100%; visibility: visible"
+      gltf-model="meshoptDecoderPath: https://digitalhuman.uk/thirdparty/meshopt_decoder.js"
+    >
+      <a-entity
+        id="Avatar"
+        position="0 0 0"
+        visible="true"
+        gltf-model="?"
+        shadow="cast: true; receive: true"
+        animation-mixer="clip: coreIdle9"
+      ></a-entity>
+
+      <a-entity
+        id="Environment"
+        position="0 0.0 0"
+        visible="true"
+        gltf-model="?"
+      ></a-entity>
+
+      <a-entity
+        id="KeyDirectionalLight"
+        visible="false"
+        light="castShadow: true; type: directional; intensity: 3; color: #f0f7ff; angle: 6; penumbra: 0.2;
+              shadowCameraFar: 10; shadowCameraTop: 2; shadowCameraBottom: -1; shadowCameraRight: 1; 
+              shadowCameraLeft: -1; shadowBias: -0.0002; shadowMapHeight: 2048; shadowMapWidth: 2048; shadowRadius: 3"
+        position="-0.8 0.86 0.726"
+      ></a-entity>
+
+      <a-entity
+        id="FillLight"
+        visible="false"
+        light="castShadow: false; intensity: 1.0; color: #ccebff"
+        position="2.4 0.5 1.25"
+      ></a-entity>
+
+      <a-entity
+        id="RimLight1"
+        visible="false"
+        light="castShadow: false; type: directional; intensity: 0.5; color: #bad3fd"
+        position="-1.1 -0.34 -2.2"
+      ></a-entity>
+
+      <a-entity
+        id="RimLight2"
+        visible="false"
+        light="castShadow: false; type: directional; intensity: 0.5; color: #bad3fd"
+        position="1.3 -0.62 -2.2"
+      ></a-entity>
+
+      <a-entity
+        id="HemiLight"
+        visible="false"
+        light="color: #ffffff; groundColor: #4aff47; intensity: 0.8; type: hemisphere"
+      ></a-entity>
+
+      <a-entity
+        id="ShadowCatcher"
+        geometry="primitive: plane"
+        material="opacity: 0.4; shader: shadow"
+        shadow="cast: false"
+        position="0.0 0.001 0.0"
+        rotation="-90 0.0 0.0"
+        scale="7 7 7"
+      ></a-entity>
+
+      <a-entity
+        id="rig"
+        movement-controls=""
+        position=""
+        nipple-controls=""
+        gamepad-controls=""
+        keyboard-controls=""
+      >
+        <a-entity
+          id="camera"
+          camera=""
+          wasd-controls="acceleration:20"
+          camera="fov: 40;"
+          position="0 1.67 2.5"
+          rotation="-15 0 0"
+          look-controls=""
+          active="true"
+        >
+        </a-entity>
+      </a-entity>
+    </a-scene>
+
+    <script>
+      let my_env =
+        "https://digitalhuman.uk/assets/environments/FootballStadium.glb";
+      let my_ava =
+        "https://digitalhuman.uk/assets/characters/Alex_Decimated/Alex_Rigged.gltf";
+
+      function loadEnv(env) {
+        const envEntity = document.getElementById("Environment")
+        envEntity.setAttribute("gltf-model", env);
+        envEntity.addEventListener("model-loaded", function (event) {
+          console.log("Environment loaded");
+        })
+      }
+
+      function loadAvatar(avatar) {
+        const avatarEntity = document.getElementById("Avatar")
+        avatarEntity.setAttribute("gltf-model", avatar);
+        avatarEntity.addEventListener("model-loaded", function (event) {
+          console.log("Avatar loaded");
+        })
+      }
+
+      function loadLight() {
+        const lights = [
+          "KeyDirectionalLight",
+          "FillLight",
+          "RimLight1",
+          "RimLight2",
+          "HemiLight",
+        ];
+        lights.forEach(function (lightId) {
+          const light = document.getElementById(lightId);
+          light.setAttribute("visible", !light.getAttribute("visible"));
+        });
+      }
+
+      function init() {
+        console.log("In init()")
+        loadEnv(my_env)
+        loadAvatar(my_ava)
+        loadLight()
+      }
+
+
+      document.querySelector("a-scene").addEventListener("loaded", function () {
+        init();
+      });
+
+      if (document.querySelector("a-scene").hasLoaded) {
+        init();
+      }
+
+
+
+
+
+      // Start time at page load
+    const startTime = new Date();
+
+    // Function to update the timer every second
+    function updateTimer() {
+      const now = new Date();
+      const elapsedSeconds = Math.floor((now - startTime) / 1000); // Convert ms to seconds
+
+      document.getElementById('timer').textContent = elapsedSeconds;
+    }
+
+    // Update the timer every 1 second (1000ms)
+    setInterval(updateTimer, 1000);
+
+
+    </script>
+  </body>
+</html>
