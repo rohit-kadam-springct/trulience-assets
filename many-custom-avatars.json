@@ -1,0 +1,30 @@
+{
+  "2d": [
+    {
+      "id": "Alex_2d",
+      "name": "Alex",
+      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Alex_2D.jpg",
+      "squareThumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-square-thumbnails/Alex_2D.jpg",
+      "configUrl": "https://rohit-kadam-springct.github.io/trulience-assets/avatar-conf/custom-alex.json",
+      "camType": "locked"
+    }
+  ],
+  "image": [
+    {
+      "id": "Custom_Priya_Image",
+      "name": "Custom Priya",
+      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Priya_2D.jpg",
+      "squareThumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-square-thumbnails/Priya_2D.jpg",
+      "configUrl": "https://rohit-kadam-springct.github.io/trulience-assets/avatar-conf/priya.json",
+      "camType": "locked"
+    },
+    {
+      "id": "Custom_Priya_Image_2",
+      "name": "Custom Priya 2",
+      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Priya_2D.jpg",
+      "squareThumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-square-thumbnails/Priya_2D.jpg",
+      "configUrl": "https://rohit-kadam-springct.github.io/trulience-assets/avatar-conf/priya-2.json",
+      "camType": "locked"
+    }
+  ]
+}
