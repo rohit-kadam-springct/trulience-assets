@@ -1,0 +1,2755 @@
+{
+    "EnableCRAP": true,
+    "Scene": {
+        "embedded": "true",
+        "shadow": "type: pcf; autoUpdate: true",
+        "renderer": "colorManagement: true; physicallyCorrectLights:true;antialias:true",
+        "light": "defaultLightsEnabled: false",
+        "vr-mode-ui": "enabled: false",
+        "device-orientation-permission-ui": "enabled: false",
+        "loading-screen": "enabled: false",
+        "powerPreference": "high-performance",
+        "background": "transparent: false",
+        "post-processing": "enabled: false; ssao: true; dots:false; vignette:false; smaa:false; bloom:false;",
+        "style": "width:100%; height:100%; visibility:hidden;"
+    },
+    "Avatar": {
+        "WebGLAvatarAsset": "assets/characters/IBA_Priya/IBA.gltf",
+        "TTSService": "Azure",
+        "TTSVoice": "en-US-AriaNeural",
+        "SpeechSpeed": 0,
+        "AzureLanguage": "en-US",
+        "SpeechRecogLang": "en-US",
+        "STTSource": "vps_sttonly",
+        "PositionX": 0.0,
+        "PositionY": 0.0,
+        "PositionZ": -0.9,
+        "DisableFrustumCulling": true,
+        "ShadowCast": true,
+        "ShadowReceive": true,
+        "InitialPosition": "DefaultCenter",
+        "Anisotropy": 8,
+        "CameraBarrier": 2.5,
+        "Materials": [
+            {
+                "name": "Std_Eyelash",
+                "property": "alphaTest",
+                "value": 0.1
+            }
+        ],
+        "WrinkleMaps": {
+            "Type": "custom",
+            "Assets": "/assets/characters/IBA_Priya/",
+            "MouthMask": "",
+            "Masks": {
+                "blinkMask": {
+                    "mask": "WM_Mask",
+                    "channel": "r"
+                },
+                "smileMask": {
+                    "mask": "WM_Mask",
+                    "channel": "g"
+                },
+                "browUpMask": {
+                    "mask": "WM_Mask",
+                    "channel": "b"
+                }
+            },
+            "Maps": [
+                {
+                    "name": "eyeBlinkLeft",
+                    "mask": "blinkMask",
+                    "side": "left",
+                    "residual": 0.0,
+                    "set": 1
+                },
+                {
+                    "name": "eyeBlinkRight",
+                    "mask": "blinkMask",
+                    "side": "right",
+                    "residual": 0.0,
+                    "set": 1
+                },
+                {
+                    "name": "mouthSmileLeft",
+                    "mask": "smileMask",
+                    "side": "left",
+                    "residual": 0.0,
+                    "multiplier": 0.7,
+                    "set": 1
+                },
+                {
+                    "name": "mouthSmileRight",
+                    "mask": "smileMask",
+                    "side": "right",
+                    "residual": 0.0,
+                    "multiplier": 0.7,
+                    "set": 1
+                },
+                {
+                    "name": "mouthUpperUpLeft",
+                    "mask": "smileMask",
+                    "side": "left",
+                    "residual": 0.0,
+                    "set": 1
+                },
+                {
+                    "name": "mouthUpperUpRight",
+                    "mask": "smileMask",
+                    "side": "right",
+                    "residual": 0.0,
+                    "set": 1
+                },
+                {
+                    "name": "vis_p",
+                    "mask": "smileMask",
+                    "side": "left",
+                    "residual": 0.0,
+                    "set": 1
+                },
+                {
+                    "name": "vis_f",
+                    "mask": "smileMask",
+                    "side": "right",
+                    "residual": 0.0,
+                    "set": 1
+                },
+                {
+                    "name": "browOuterUpLeft",
+                    "mask": "browUpMask",
+                    "side": "left",
+                    "residual": 0.0,
+                    "set": 1
+                },
+                {
+                    "name": "browOuterUpRight",
+                    "mask": "browUpMask",
+                    "side": "right",
+                    "residual": 0.0,
+                    "set": 1
+                }
+            ]
+        },
+        "A2VVersion": "A2C.1",
+        "WebGLAvatarSkeletalAnimsAsset": [
+            "/assets/characters/IBA_Anims/IBA_Anims.glb",
+            "/assets/characters/IBA_Priya/IBO.glb"
+        ]
+    },
+    "BaseSmiles": {
+        "Enable": true,
+        "MinIdle": 0.4,
+        "MaxIdle": 0.5,
+        "MinTalking": 0.2,
+        "MaxTalking": 0.4,
+        "GapIdle": 0.2,
+        "GapTalking": 0.1,
+        "MinFadeIn": 1,
+        "MaxFadeIn": 3,
+        "MinFadeOut": 2.5,
+        "MaxFadeOut": 4,
+        "MinFinal": 0.8,
+        "MaxFinal": 0.9,
+        "MinPeak": 0.5,
+        "MaxPeak": 1.5
+    },
+    "BaseAnims": {
+        "BaseAnimEnable": true,
+        "ShowAnimNames": true,
+        "ListeningDelay": 1.0,
+        "ListeningTimeout": 20.0,
+        "BaseAnimTalking": [
+            "coreIdle0_NH",
+            "coreIdle9_NH",
+            "coreIdle13_NH",
+            "coreIdle14_NH"
+        ],
+        "BaseAnimListening": [
+            "coreListeningNodA",
+            "coreListeningNodB",
+            "coreListeningNodC",
+            "coreListeningNodD",
+            "coreListeningNodE",
+            "coreListeningNodF",
+            "coreListeningNodG"
+        ],
+        "BaseAnimIdle": [
+            "coreIdle0",
+            "coreIdle9",
+            "coreIdle13",
+            "coreIdle14"
+        ],
+        "BaseAnimThinking": [
+            "coreIdle0",
+            "coreIdle9",
+            "coreIdle13",
+            "coreIdle14"
+        ]
+    },
+    "Layers": {
+        "Enabled": false,
+        "Base": {
+            "idle": [
+                "LowerBodyIdle_01_M",
+                "LowerBodyIdle_02_M",
+                "LowerBodyIdle_03_M"
+            ],
+            "Additive": false,
+            "Enabled": true,
+            "fadeIn": 1.0,
+            "maxDuration": -1,
+            "TrackState": false
+        },
+        "Head": {
+            "idle": [
+                "coreIdle0",
+                "coreIdle9",
+                "coreIdle13",
+                "coreIdle14"
+            ],
+            "talking": [
+                "coreIdle9"
+            ],
+            "listening": [
+                "coreIdle0",
+                "coreIdle9",
+                "coreIdle13",
+                "coreIdle14"
+            ],
+            "Additive": true,
+            "Enabled": true,
+            "fadeIn": 1.0,
+            "maxDuration": -1,
+            "TrackState": true
+        },
+        "Hands": {
+            "idle": [
+                "Gesture_Hands_Down_01"
+            ],
+            "talking": [
+                "Gesture_Hands_Show_01",
+                "Gesture_Hands_Ball_L_01",
+                "Gesture_Hands_Ball_R_01",
+                "Gesture_Hands_By_Side_01"
+            ],
+            "listening": [
+                "Gesture_Hands_Down_01"
+            ],
+            "Additive": true,
+            "Enabled": true,
+            "fadeIn": 0.3,
+            "maxDuration": 2.0,
+            "TrackState": true
+        }
+    },
+    "Camera": {
+        "position": "0 1.55 1.3",
+        "rotation": "0 0 0",
+        "camera": "fov: 15; near: 0.05"
+    },
+    "Lights": [
+        {
+            "id": "KeyDirectionalLight",
+            "position": "2.5 -0.5 2.5",
+            "light": "castShadow: true; type:directional; intensity: 2.0; color: #fff7cc; angle: 6; penumbra: 0.2; shadowCameraFar: 10; shadowCameraTop: 2.0; shadowCameraBottom: 1.0; shadowCameraRight: 1.1; shadowCameraLeft: 0.1; shadowBias: -0.0002; shadowMapHeight: 4096; shadowMapWidth: 4096; shadowRadius: 4"
+        },
+        {
+            "id": "SpecPointLight",
+            "position": "0.16 1.4 0.3",
+            "light": "castShadow: false; type:point; intensity: 0.2; color: #d6eeff"
+        },
+        {
+            "id": "HemiLight",
+            "light": "color:  #f5a275; groundColor:  #ff6738;  intensity:  0.5;  type:  hemisphere"
+        }
+    ],
+    "panel": {
+        "Enable": true,
+        "PositionX": 0.0,
+        "PositionY": 1.55,
+        "PositionZ": -4.44,
+        "RotationX": 0,
+        "RotationY": 0,
+        "RotationZ": 0,
+        "width": 3.2,
+        "height": 1.8,
+        "FGLeft": -100,
+        "FGTop": 10,
+        "FGWidth": 50,
+        "FGHeight": 50,
+        "FGAspectRatio": "16/9",
+        "contentURL": "https://www.trulience.com/home/assets/img/bg/HomeBlurred3.png",
+        "BgColor": "",
+        "BgFit": "cover",
+        "BgPointer": true,
+        "BgVolume": 0.3,
+        "BgCSS": "radial-gradient(circle, rgb(220 220 220 / 73%) 0%, rgb(65 74 84 / 87%) 100%)",
+        "FGScreenURL": "/assets/video/video_placeholder.mp4",
+        "FgFit": "contain",
+        "FgPointer": false,
+        "FgVolume": 0.3
+    },
+    "Speech": {
+        "LastSilMinDelay": 0.2,
+        "LastSilMaxDelay": 0.5,
+        "LastSilMinStretch": 0.1,
+        "LastSilMaxStretch": 0.2,
+        "BrowRaiseMinSpeed": 2,
+        "BrowRaiseMaxSpeed": 5,
+        "BrowDownMinSpeed": 3.5,
+        "BrowDownMaxSpeed": 6,
+        "ForceBrowRaise": true,
+        "ShowAnimNames": true,
+        "CCInterruptAvatarTalkingWithNewAvatarSpeech": true,
+        "AudioDelay": -50,
+        "TTSTimeout": 15000,
+        "HeadTilts": true,
+        "HeadTiltvelocity": {
+            "x": 1,
+            "y": 1.5,
+            "z": 0.75
+        },
+        "BrowRaiseGap": 2,
+        "BrowLevelMin": 0.4,
+        "BrowLevelMax": 0.5,
+        "BrowSpeedMin": 3.7,
+        "BrowSpeedMax": 4.5,
+        "BrowReturnSpeedMin": 3,
+        "BrowReturnSpeedMax": 5,
+        "UseSMVersion2": false,
+        "LipsTurnRate": 1.0,
+        "LipsTurnUponOpen": false,
+        "MouthCloseSmoothRate": 0.1,
+        "StreamingDelay": 0,
+        "MinMouthOpenDist": 0.001,
+        "MaxMouthOpenDist": 0.008,
+        "TeethMeshName": "mesh_0_3",
+        "TranslationBoneName": "Jnt_Root",
+        "EmulateStreaming": true,
+        "BrowBSLevelMin": 0.2,
+        "BrowBSLevelMax": 0.3,
+        "WrinkleRate": 1.5,
+        "HeadTranslationRate": 0.667,
+        "TeethColorOpen": [
+            1.0,
+            1.0,
+            1.0
+        ],
+        "TeethColorClose": [
+            0.2,
+            0.15,
+            0.05
+        ]
+    },
+    "VisemeToBS": {
+        "E": {
+            "level": 1,
+            "name": "vis_E_cap"
+        },
+        "O": {
+            "level": 1,
+            "name": "vis_O_cap"
+        },
+        "S": {
+            "level": 1,
+            "name": "vis_S_cap"
+        },
+        "S_open": {
+            "level": 1,
+            "name": "vis_S_cap_open"
+        },
+        "T": {
+            "level": 1,
+            "name": "vis_T_cap"
+        },
+        "a": {
+            "level": 1,
+            "name": "vis_a"
+        },
+        "@": {
+            "level": 1,
+            "name": "vis_at"
+        },
+        "at": {
+            "level": 1,
+            "name": "vis_at"
+        },
+        "e": {
+            "level": 1,
+            "name": "vis_e"
+        },
+        "f": {
+            "level": 1,
+            "name": "vis_f"
+        },
+        "f_hard": {
+            "level": 1,
+            "name": "vis_f_hard"
+        },
+        "i": {
+            "level": 1,
+            "name": "vis_i"
+        },
+        "k": {
+            "level": 1,
+            "name": "vis_k"
+        },
+        "o": {
+            "level": 1,
+            "name": "vis_o"
+        },
+        "open": {
+            "level": 1,
+            "name": "vis_open"
+        },
+        "p": {
+            "level": 1,
+            "name": "vis_p"
+        },
+        "p_hard": {
+            "level": 1,
+            "name": "vis_p_hard"
+        },
+        "r": {
+            "level": 1,
+            "name": "vis_r"
+        },
+        "r_hard": {
+            "level": 1,
+            "name": "vis_r_hard"
+        },
+        "r_soft": {
+            "level": 1,
+            "name": "vis_r_soft"
+        },
+        "r_neutral": {
+            "level": 1,
+            "name": "vis_r_neutral"
+        },
+        "s": {
+            "level": 1,
+            "name": "vis_s"
+        },
+        "sil": {
+            "level": 1,
+            "name": "vis_sil"
+        },
+        "t": {
+            "level": 1,
+            "name": "vis_t"
+        },
+        "u": {
+            "level": 1,
+            "name": "vis_u"
+        },
+        "u_hard": {
+            "level": 1,
+            "name": "vis_u_hard"
+        },
+        "u_soft": {
+            "level": 1,
+            "name": "vis_u_soft"
+        },
+        "widen": {
+            "level": 1,
+            "name": "vis_widen"
+        },
+        "purse": {
+            "level": 1,
+            "name": "vis_purse"
+        }
+    },
+    "LookAt": {
+        "Enable": false,
+        "Target": "camera",
+        "Offset": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "CameraOffsetMin": {
+            "x": -0.03,
+            "y": -0.01
+        },
+        "CameraOffsetMax": {
+            "x": 0.03,
+            "y": 0.01
+        },
+        "DurationMin": 0.0001,
+        "DurationMax": 0.0002,
+        "LeftEyeBoneName": "CC_Base_L_Eye",
+        "RightEyeBoneName": "CC_Base_R_Eye",
+        "HeadBoneName": "Jnt_Head",
+        "RootBoneName": "Jnt_Spine",
+        "HeadTiltWeights": {
+            "Jnt_Head": 1,
+            "Jnt_Spine": 0.2
+        },
+        "MaxHeadAngle": 0.2,
+        "Interval": 1.0,
+        "ClampAngleX": 0.6,
+        "ClampAngleY": 0.2,
+        "Head": {
+            "TrackCamera": false,
+            "MaxParentAngle": 0.8,
+            "ClampAngleX": 1.0,
+            "ClampAngleY": 1.0,
+            "ClampAngleZ": 1.0,
+            "OffsetX": 0.0,
+            "OffsetY": 0.0,
+            "OffsetZ": 0.0,
+            "TiltDuration": 1000,
+            "MaxDistance": 1000000
+        }
+    },
+    "BlinkConfig": {
+        "Enable": true,
+        "GapMinIdle": 6.0,
+        "GapMaxIdle": 8.0,
+        "GapMinTalking": 3.0,
+        "GapMaxTalking": 5.0,
+        "GapMinListening": 4.0,
+        "GapMaxListening": 8.0,
+        "SpeedMin": 15,
+        "SpeedMax": 20,
+        "HalfMin": 0.5,
+        "HalfMax": 0.8,
+        "DoubleRatio": 0.0,
+        "HalfRatio": 0.0
+    },
+    "Subtitle": {
+        "Enabled": true,
+        "MaxLength": 45,
+        "Padding": 10,
+        "FontSize": 20,
+        "MaxLengthMobile": 35,
+        "FontSizeMobile": 14,
+        "PaddingMobile": 5,
+        "PositionLeft": 50,
+        "TransformY": -15,
+        "TransformX": -50,
+        "Background": "rgba(0, 0, 0, 0.6)"
+    },
+    "Quality": {
+        "Min": 0.5,
+        "Max": 0.95,
+        "Mobile": 0.55,
+        "Dynamic": true,
+        "CanIncrease": false,
+        "HighFPS": 60,
+        "LowFPS": 30,
+        "Default": 0.75
+    },
+    "PreLoad": [],
+    "OnLoad": [],
+    "Sequences": {
+        "BrowRaise": [
+            {
+                "browInnerUp": 0.5,
+                "browOuterUpLeft": 1,
+                "browOuterUpRight": 1
+            },
+            {
+                "browInnerUp": 0.5,
+                "browOuterUpLeft": 1,
+                "browOuterUpRight": 1
+            },
+            {
+                "browInnerUp": 0,
+                "browOuterUpLeft": 0,
+                "browOuterUpRight": 0
+            }
+        ],
+        "Frown": [
+            {
+                "browInnerUp": 0.3,
+                "browDownLeft": 1,
+                "browDownRight": 1
+            },
+            {
+                "browInnerUp": 0.3,
+                "browDownLeft": 1,
+                "browDownRight": 1
+            },
+            {
+                "browInnerUp": 0,
+                "browDownLeft": 0,
+                "browDownRight": 0
+            }
+        ],
+        "lookRight": [
+            {
+                "eyeLookInLeft": 0.5,
+                "eyeLookOutRight": 0.5
+            },
+            {
+                "eyeLookInLeft": 0.5,
+                "eyeLookOutRight": 0.5
+            },
+            {
+                "eyeLookInLeft": 0,
+                "eyeLookOutRight": 0
+            }
+        ],
+        "lookLeft": [
+            {
+                "eyeLookOutLeft": 0.5,
+                "eyeLookInRight": 0.5
+            },
+            {
+                "eyeLookOutLeft": 0.5,
+                "eyeLookInRight": 0.5
+            },
+            {
+                "eyeLookOutLeft": 0,
+                "eyeLookInRight": 0
+            }
+        ],
+        "mouthOpen": [
+            {
+                "jawOpen": 0.07
+            },
+            {
+                "jawOpen": 0.07
+            },
+            {
+                "jawOpen": 0
+            }
+        ],
+        "mouthPucker": [
+            {
+                "mouthPucker": 0.2
+            },
+            {
+                "mouthPucker": 0.2
+            },
+            {
+                "mouthPucker": 0
+            }
+        ],
+        "noseSneer": [
+            {
+                "noseSneerLeft": 0.15,
+                "noseSneerRight": 0.15,
+                "eyeSquintLeft": 0.15,
+                "eyeSquintRight": 0.15
+            },
+            {
+                "noseSneerLeft": 0.12,
+                "noseSneerRight": 0.12,
+                "eyeSquintLeft": 0.1,
+                "eyeSquintRight": 0
+            },
+            {
+                "noseSneerLeft": 0,
+                "noseSneerRight": 0,
+                "eyeSquintLeft": 0,
+                "eyeSquintRight": 0
+            }
+        ],
+        "mouthRight": [
+            {
+                "mouthRight": 0.15,
+                "mouthShrugLower": 0.25,
+                "mouthShrugUpper": 0.25
+            },
+            {
+                "mouthRight": 0.1,
+                "mouthShrugLower": 0.15,
+                "mouthShrugUpper": 0.15
+            },
+            {
+                "mouthRight": 0,
+                "mouthShrugLower": 0,
+                "mouthShrugUpper": 0
+            }
+        ],
+        "mouthLeft": [
+            {
+                "mouthLeft": 0.15,
+                "mouthShrugLower": 0.25,
+                "mouthShrugUpper": 0.25
+            },
+            {
+                "mouthLeft": 0.1,
+                "mouthShrugLower": 0.15,
+                "mouthShrugUpper": 0.15
+            },
+            {
+                "mouthLeft": 0,
+                "mouthShrugLower": 0,
+                "mouthShrugUpper": 0
+            }
+        ],
+        "mouthUp": [
+            {
+                "mouthShrugLower": 0.3,
+                "mouthShrugUpper": 0.3
+            },
+            {
+                "mouthShrugLower": 0.25,
+                "mouthShrugUpper": 0.25
+            },
+            {
+                "mouthShrugLower": 0,
+                "mouthShrugUpper": 0
+            }
+        ],
+        "eyesSquint": [
+            {
+                "eyeSquintRight": 0.4,
+                "eyeSquintLeft": 0.4
+            },
+            {
+                "eyeSquintRight": 0.35,
+                "eyeSquintLeft": 0.35
+            },
+            {
+                "eyeSquintRight": 0,
+                "eyeSquintLeft": 0
+            }
+        ],
+        "raisedBrowSmall": [
+            {
+                "browInnerUp": 0.35,
+                "browOuterUpLeft": 0.35,
+                "browOuterUpRight": 0.35
+            },
+            {
+                "browInnerUp": 0.25,
+                "browOuterUpLeft": 0.25,
+                "browOuterUpRight": 0.25
+            },
+            {
+                "browInnerUp": 0,
+                "browOuterUpLeft": 0,
+                "browOuterUpRight": 0
+            }
+        ],
+        "raisedBrowMid": [
+            {
+                "browInnerUp": 0.5,
+                "browOuterUpLeft": 0.5,
+                "browOuterUpRight": 0.5
+            },
+            {
+                "browInnerUp": 0.4,
+                "browOuterUpLeft": 0.4,
+                "browOuterUpRight": 0.4
+            },
+            {
+                "browInnerUp": 0,
+                "browOuterUpLeft": 0,
+                "browOuterUpRight": 0
+            }
+        ],
+        "raisedBrowMedium": [
+            {
+                "browInnerUp": 0.7,
+                "browOuterUpLeft": 0.7,
+                "browOuterUpRight": 0.7
+            },
+            {
+                "browInnerUp": 0.6,
+                "browOuterUpLeft": 0.6,
+                "browOuterUpRight": 0.6
+            },
+            {
+                "browInnerUp": 0,
+                "browOuterUpLeft": 0,
+                "browOuterUpRight": 0
+            }
+        ],
+        "raisedBrowLarge": [
+            {
+                "browInnerUp": 1,
+                "browOuterUpLeft": 1,
+                "browOuterUpRight": 1
+            },
+            {
+                "browInnerUp": 0.9,
+                "browOuterUpLeft": 0.9,
+                "browOuterUpRight": 0.9
+            },
+            {
+                "browInnerUp": 0,
+                "browOuterUpLeft": 0,
+                "browOuterUpRight": 0
+            }
+        ],
+        "frownSmall": [
+            {
+                "browInnerUp": 0.15,
+                "browDownLeft": 0.35,
+                "browDownRight": 0.35
+            },
+            {
+                "browInnerUp": 0.1,
+                "browDownLeft": 0.3,
+                "browDownRight": 0.3
+            },
+            {
+                "browInnerUp": 0,
+                "browDownLeft": 0,
+                "browDownRight": 0
+            }
+        ],
+        "frownMid": [
+            {
+                "browInnerUp": 0.3,
+                "browDownLeft": 0.5,
+                "browDownRight": 0.5
+            },
+            {
+                "browInnerUp": 0.25,
+                "browDownLeft": 0.45,
+                "browDownRight": 0.45
+            },
+            {
+                "browInnerUp": 0,
+                "browDownLeft": 0,
+                "browDownRight": 0
+            }
+        ],
+        "frownMedium": [
+            {
+                "browInnerUp": 0.5,
+                "browDownLeft": 0.7,
+                "browDownRight": 0.7
+            },
+            {
+                "browInnerUp": 0.4,
+                "browDownLeft": 0.6,
+                "browDownRight": 0.6
+            },
+            {
+                "browInnerUp": 0,
+                "browDownLeft": 0,
+                "browDownRight": 0
+            }
+        ],
+        "frownLarge": [
+            {
+                "browInnerUp": 0.7,
+                "browDownLeft": 1,
+                "browDownRight": 1
+            },
+            {
+                "browInnerUp": 0.6,
+                "browDownLeft": 0.9,
+                "browDownRight": 0.9
+            },
+            {
+                "browInnerUp": 0,
+                "browDownLeft": 0,
+                "browDownRight": 0
+            }
+        ],
+        "smileSmall": [
+            {
+                "mouthSmileLeft": 0.3,
+                "mouthSmileRight": 0.3,
+                "cheekSquintLeft": 0.05,
+                "cheekSquintRight": 0.05
+            },
+            {
+                "mouthSmileLeft": 0.35,
+                "mouthSmileRight": 0.35,
+                "cheekSquintLeft": 0.1,
+                "cheekSquintRight": 0.1
+            },
+            {
+                "mouthSmileLeft": 0.25,
+                "mouthSmileRight": 0.25,
+                "cheekSquintLeft": 0.05,
+                "cheekSquintRight": 0.05
+            }
+        ],
+        "smileMid": [
+            {
+                "mouthFunnel": 0.03,
+                "mouthSmileLeft": 0.45,
+                "mouthSmileRight": 0.45,
+                "cheekSquintLeft": 0.1,
+                "cheekSquintRight": 0.1
+            },
+            {
+                "mouthFunnel": 0.05,
+                "mouthSmileLeft": 0.5,
+                "mouthSmileRight": 0.5,
+                "cheekSquintLeft": 0.2,
+                "cheekSquintRight": 0.2
+            },
+            {
+                "mouthFunnel": 0.02,
+                "mouthSmileLeft": 0.35,
+                "mouthSmileRight": 0.35,
+                "cheekSquintLeft": 0.1,
+                "cheekSquintRight": 0.1
+            }
+        ],
+        "smileMedium": [
+            {
+                "mouthFunnel": 0.03,
+                "mouthSmileLeft": 0.6,
+                "mouthSmileRight": 0.65,
+                "cheekSquintLeft": 0.3,
+                "cheekSquintRight": 0.3
+            },
+            {
+                "mouthFunnel": 0.05,
+                "mouthSmileLeft": 0.72,
+                "mouthSmileRight": 0.7,
+                "cheekSquintLeft": 0.4,
+                "cheekSquintRight": 0.4
+            },
+            {
+                "mouthFunnel": 0.02,
+                "mouthSmileLeft": 0.55,
+                "mouthSmileRight": 0.65,
+                "cheekSquintLeft": 0.3,
+                "cheekSquintRight": 0.3
+            }
+        ],
+        "smileLarge": [
+            {
+                "mouthFunnel": 0.08,
+                "mouthSmileLeft": 0.7,
+                "mouthSmileRight": 0.7,
+                "cheekSquintLeft": 0.3,
+                "cheekSquintRight": 0.3,
+                "mouthLowerDownLeft": 0.02,
+                "mouthLowerDownRight": 0.03,
+                "mouthUpperUpLeft": 0.025,
+                "mouthUpperUpRight": 0.03,
+                "jawOpen": 0.05
+            },
+            {
+                "mouthFunnel": 0.11,
+                "mouthSmileLeft": 0.9,
+                "mouthSmileRight": 0.9,
+                "cheekSquintLeft": 0.5,
+                "cheekSquintRight": 0.5,
+                "mouthLowerDownLeft": 0.04,
+                "mouthLowerDownRight": 0.05,
+                "mouthUpperUpLeft": 0.045,
+                "mouthUpperUpRight": 0.05,
+                "jawOpen": 0.13
+            },
+            {
+                "mouthFunnel": 0.1,
+                "mouthSmileLeft": 0.8,
+                "mouthSmileRight": 0.8,
+                "cheekSquintLeft": 0.3,
+                "cheekSquintRight": 0.3,
+                "mouthLowerDownLeft": 0,
+                "mouthLowerDownRight": 0,
+                "mouthUpperUpLeft": 0,
+                "mouthUpperUpRight": 0,
+                "jawOpen": 0
+            }
+        ],
+        "BaseSmile": [
+            {
+                "mouthFunnel": 0.05,
+                "mouthSmileLeft": 0.7,
+                "mouthSmileRight": 0.7,
+                "cheekSquintLeft": 0.7,
+                "cheekSquintRight": 0.7,
+                "eyeSquintLeft": 0.2,
+                "eyeSquintRight": 0.2
+            },
+            {
+                "mouthFunnel": 0.05,
+                "mouthSmileLeft": 0.7,
+                "mouthSmileRight": 0.7,
+                "cheekSquintLeft": 0.35,
+                "cheekSquintRight": 0.35,
+                "eyeSquintLeft": 0.15,
+                "eyeSquintRight": 0.15
+            },
+            {
+                "mouthFunnel": 0.05,
+                "mouthSmileLeft": 0.5,
+                "mouthSmileRight": 0.5,
+                "cheekSquintLeft": 0.3,
+                "cheekSquintRight": 0.3,
+                "eyeSquintLeft": 0.1,
+                "eyeSquintRight": 0.1
+            }
+        ],
+        "Blink": [
+            {
+                "eyeBlinkLeft": 1,
+                "eyeBlinkRight": 1
+            },
+            {
+                "eyeBlinkLeft": 1,
+                "eyeBlinkRight": 1
+            },
+            {
+                "eyeBlinkLeft": 0,
+                "eyeBlinkRight": 0
+            }
+        ],
+        "DoubleBlink": [
+            {
+                "eyeBlinkLeft": 1,
+                "eyeBlinkRight": 1
+            },
+            {
+                "eyeBlinkLeft": 0,
+                "eyeBlinkRight": 0
+            },
+            {
+                "eyeBlinkLeft": 1,
+                "eyeBlinkRight": 1
+            },
+            {
+                "eyeBlinkLeft": 0,
+                "eyeBlinkRight": 0
+            }
+        ],
+        "smileMouthOpenLarge": [
+            {
+                "mouthFunnel": 0.1,
+                "mouthSmileLeft": 0.4,
+                "mouthSmileRight": 0.4,
+                "cheekSquintLeft": 0.3,
+                "cheekSquintRight": 0.3,
+                "mouthLowerDownLeft": 0.02,
+                "mouthLowerDownRight": 0.03,
+                "mouthUpperUpLeft": 0.025,
+                "mouthUpperUpRight": 0.03
+            },
+            {
+                "mouthFunnel": 0.3,
+                "mouthSmileLeft": 0.7,
+                "mouthSmileRight": 0.7,
+                "cheekSquintLeft": 0.4,
+                "cheekSquintRight": 0.4,
+                "mouthLowerDownLeft": 0.03,
+                "mouthLowerDownRight": 0.04,
+                "mouthUpperUpLeft": 0.04,
+                "mouthUpperUpRight": 0.04,
+                "jawOpen": 0.05
+            },
+            {
+                "mouthFunnel": 0.35,
+                "mouthSmileLeft": 0.75,
+                "mouthSmileRight": 0.75,
+                "cheekSquintLeft": 0.5,
+                "cheekSquintRight": 0.5,
+                "mouthLowerDownLeft": 0.04,
+                "mouthLowerDownRight": 0.05,
+                "mouthUpperUpLeft": 0.045,
+                "mouthUpperUpRight": 0.05,
+                "jawOpen": 0.05
+            },
+            {
+                "mouthFunnel": 0.0,
+                "mouthSmileLeft": 0.5,
+                "mouthSmileRight": 0.5,
+                "cheekSquintLeft": 0.3,
+                "cheekSquintRight": 0.3,
+                "mouthLowerDownLeft": 0,
+                "mouthLowerDownRight": 0,
+                "mouthUpperUpLeft": 0,
+                "mouthUpperUpRight": 0,
+                "jawOpen": 0
+            }
+        ],
+        "smileMouthOpenMedium": [
+            {
+                "mouthFunnel": 0.1,
+                "mouthSmileLeft": 0.3,
+                "mouthSmileRight": 0.3,
+                "cheekSquintLeft": 0.3,
+                "cheekSquintRight": 0.3,
+                "mouthLowerDownLeft": 0.01,
+                "mouthLowerDownRight": 0.02,
+                "mouthUpperUpLeft": 0.02,
+                "mouthUpperUpRight": 0.02
+            },
+            {
+                "mouthFunnel": 0.15,
+                "mouthSmileLeft": 0.5,
+                "mouthSmileRight": 0.5,
+                "cheekSquintLeft": 0.35,
+                "cheekSquintRight": 0.35,
+                "mouthLowerDownLeft": 0.02,
+                "mouthLowerDownRight": 0.03,
+                "mouthUpperUpLeft": 0.03,
+                "mouthUpperUpRight": 0.03
+            },
+            {
+                "mouthFunnel": 0.2,
+                "mouthSmileLeft": 0.6,
+                "mouthSmileRight": 0.6,
+                "cheekSquintLeft": 0.5,
+                "cheekSquintRight": 0.5,
+                "mouthLowerDownLeft": 0.03,
+                "mouthLowerDownRight": 0.04,
+                "mouthUpperUpLeft": 0.035,
+                "mouthUpperUpRight": 0.03
+            },
+            {
+                "mouthFunnel": 0.0,
+                "mouthSmileLeft": 0.4,
+                "mouthSmileRight": 0.4,
+                "cheekSquintLeft": 0.3,
+                "cheekSquintRight": 0.3,
+                "mouthLowerDownLeft": 0,
+                "mouthLowerDownRight": 0,
+                "mouthUpperUpLeft": 0,
+                "mouthUpperUpRight": 0
+            }
+        ]
+    },
+    "Positions": {
+        "DefaultCenter": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "BottomLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.25,
+                    "y": -0.1,
+                    "z": -1
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 40,
+                "Top": 20,
+                "Width": 50,
+                "Height": 50
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarZoomOutDefaultCenter": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0.05,
+                    "z": -0.5
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenAngledMediumLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0.3,
+                    "y": 0,
+                    "z": -1.2
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": -20,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 10,
+                "Top": 20,
+                "Width": 50,
+                "Height": 60,
+                "Angle": 15
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenAngledSmallLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0.3,
+                    "y": 0,
+                    "z": -1.1
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": -20,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 10,
+                "Top": 20,
+                "Width": 45,
+                "Height": 45,
+                "Angle": 15
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarDefaultCenter": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": -0.2
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenAngledMediumRight": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.3,
+                    "y": 0,
+                    "z": -1.2
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 20,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 40,
+                "Top": 20,
+                "Width": 50,
+                "Height": 60,
+                "Angle": -15
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenAngledSmallRight": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.3,
+                    "y": 0,
+                    "z": -1.1
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 20,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 40,
+                "Top": 20,
+                "Width": 45,
+                "Height": 45,
+                "Angle": -15
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarSmallRight": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0.35,
+                    "y": 0,
+                    "z": -0.7
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": -10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatMediumLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0.3,
+                    "y": -0.07,
+                    "z": -0.75
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": -10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 5,
+                "Top": 20,
+                "Width": 50,
+                "Height": 50
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatSmallLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0.2,
+                    "y": 0,
+                    "z": -0.5
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": -10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 10,
+                "Top": 20,
+                "Width": 40,
+                "Height": 40
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarSmallLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.35,
+                    "y": 0,
+                    "z": -0.7
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatMediumRight": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.3,
+                    "y": -0.07,
+                    "z": -0.75
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 40,
+                "Top": 20,
+                "Width": 50,
+                "Height": 50
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatSmallRight": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.2,
+                    "y": 0,
+                    "z": -0.5
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 50,
+                "Top": 20,
+                "Width": 40,
+                "Height": 40
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "Holo": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 0,
+                "Top": 0,
+                "Width": 60,
+                "Height": 60
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarMaxZoomInOffCenterLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.05,
+                    "y": 0,
+                    "z": 0.15
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 5,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarMaxZoomInCenterUp": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0.15
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeNoAvatar": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 10000
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarDefaultRight": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0.2,
+                    "y": 0,
+                    "z": -0.2
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": -10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarMediumRight": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0.25,
+                    "y": 0,
+                    "z": -0.4
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": -10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarDefaultLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.2,
+                    "y": 0,
+                    "z": -0.2
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenFlatLargeAvatarMediumLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.25,
+                    "y": 0,
+                    "z": -0.4
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 10,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenAngledXSmallLeft": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0.3,
+                    "y": 0,
+                    "z": -0.9
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": -20,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 10,
+                "Top": 20,
+                "Width": 40,
+                "Height": 40,
+                "Angle": 15
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "ScreenAngledXSmallRight": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": -0.3,
+                    "y": 0,
+                    "z": -0.9
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 20,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": true,
+                "Left": 50,
+                "Top": 20,
+                "Width": 40,
+                "Height": 40,
+                "Angle": -15
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "CenterUpperBodyZoomOut": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0.3,
+                    "z": -2.2
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "CenterUpperBody": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0.2,
+                    "z": -2
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "HoloZoom": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 0,
+                "Top": 0,
+                "Width": 60,
+                "Height": 60
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "CenterFace": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "CenterFullBody": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.1,
+                    "z": -3
+                },
+                "Scale": {
+                    "x": 0.5,
+                    "y": 0.5,
+                    "z": 0.5
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "CenterChestUp": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0.1,
+                    "z": -1
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        },
+        "CenterShouldersUp": {
+            "CharacterPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 0.05,
+                    "z": -0.7
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            },
+            "ScreenPosition": {
+                "Enabled": false,
+                "Left": 0,
+                "Top": 0,
+                "Width": 100,
+                "Height": 100
+            },
+            "CameraPosition": {
+                "Translation": {
+                    "x": 0,
+                    "y": 1.55,
+                    "z": 1.3
+                },
+                "Scale": {
+                    "x": 1,
+                    "y": 1,
+                    "z": 1
+                },
+                "Rotation": {
+                    "x": 0,
+                    "y": 0,
+                    "z": 0
+                }
+            }
+        }
+    },
+    "TwitchesConfig": {
+        "ShowAnimNames": false,
+        "IdleEnable": true,
+        "IdleMinGap": 1,
+        "IdleMaxGap": 3,
+        "IdleTwitches": [
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMid",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 1,
+                    "Duration": 5,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMid",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 1,
+                    "Duration": 5,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMedium",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 1,
+                    "Duration": 5,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMedium",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 1,
+                    "Duration": 5,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "lookRight",
+                    "Level": 1,
+                    "Final": 0,
+                    "Speed": 8,
+                    "Duration": 3,
+                    "ReturnSpeed": 4,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "lookLeft",
+                    "Level": 1,
+                    "Final": 0,
+                    "Speed": 8,
+                    "Duration": 3,
+                    "ReturnSpeed": 4,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "mouthOpen",
+                    "Level": 1,
+                    "Final": 0,
+                    "Speed": 1.5,
+                    "Duration": 4,
+                    "ReturnSpeed": 0.8,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "mouthPucker",
+                    "Level": 1,
+                    "Final": 0,
+                    "Speed": 3,
+                    "Duration": 2,
+                    "ReturnSpeed": 1.2,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "noseSneer",
+                    "Level": 1,
+                    "Final": 0,
+                    "Speed": 15,
+                    "Duration": 0.2,
+                    "ReturnSpeed": 8,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "mouthRight",
+                    "Level": 1,
+                    "Final": 0,
+                    "Speed": 1.5,
+                    "Duration": 3,
+                    "ReturnSpeed": 0.8,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "mouthLeft",
+                    "Level": 1,
+                    "Final": 0,
+                    "Speed": 1.5,
+                    "Duration": 3,
+                    "ReturnSpeed": 0.8,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "mouthUp",
+                    "Level": 1,
+                    "Final": 0,
+                    "Speed": 1.5,
+                    "Duration": 3,
+                    "ReturnSpeed": 0.8,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "eyesSquint",
+                    "Level": 1,
+                    "Final": 0,
+                    "Speed": 2.5,
+                    "Duration": 3,
+                    "ReturnSpeed": 0.8,
+                    "DisableLookAt": false
+                }
+            ]
+        ],
+        "TalkingEnable": false,
+        "TalkingMinGap": 2,
+        "TalkingMaxGap": 4,
+        "TalkingTwitches": [
+            [
+                {
+                    "Type": "Morph",
+                    "Name": "noseSneerLeft",
+                    "Min": 0,
+                    "Max": 1,
+                    "Speed": 4,
+                    "Wait": 0,
+                    "ReturnSpeed": 4,
+                    "DisableLookAt": false
+                },
+                {
+                    "Type": "Morph",
+                    "Name": "noseSneerRight",
+                    "Min": 0,
+                    "max": 1,
+                    "Speed": 3,
+                    "Wait": 0.1,
+                    "ReturnSpeed": 4,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Morph",
+                    "Name": "mouthSmileLeft",
+                    "Min": 0.1,
+                    "Max": 0.7,
+                    "Speed": 3,
+                    "Wait": 0.1,
+                    "ReturnSpeed": 2,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Morph",
+                    "Name": "mouthSmileRight",
+                    "Min": 0.1,
+                    "Max": 0.5,
+                    "Speed": 2,
+                    "Wait": 0.2,
+                    "ReturnSpeed": 4,
+                    "DisableLookAt": false
+                }
+            ]
+        ],
+        "ListeningEnable": true,
+        "ListeningMinGap": 0.2,
+        "ListeningMaxGap": 0.5,
+        "ListeningTwitches": [
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMouthOpenLarge",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 6,
+                    "Duration": 3,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMouthOpenLarge",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 6,
+                    "Duration": 3,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMouthOpenMedium",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 6,
+                    "Duration": 3,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMouthOpenMedium",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 6,
+                    "Duration": 3,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMedium",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 6,
+                    "Duration": 3,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "smileMedium",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 6,
+                    "Duration": 3,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ],
+            [
+                {
+                    "Type": "Sequence",
+                    "Name": "mouthOpen",
+                    "Level": 1,
+                    "Final": 1,
+                    "Speed": 6,
+                    "Duration": 3,
+                    "ReturnSpeed": 1,
+                    "DisableLookAt": false
+                }
+            ]
+        ],
+        "# Listening Twitches": "--------------------"
+    }
+}
