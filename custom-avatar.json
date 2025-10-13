@@ -17,6 +17,14 @@
       "squareThumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-square-thumbnails/Priya_2D.jpg",
       "configUrl": "https://trulience.com/conf/vba_bella1_exp_transition_gs.json",
       "camType": "locked"
+    },
+    {
+      "id": "CustomBellaAvatar2",
+      "name": "Bella Expression 2",
+      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Priya_2D.jpg",
+      "squareThumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-square-thumbnails/Priya_2D.jpg",
+      "configUrl": "https://trulience.com/conf/vba_bella1_exp_transition_gs.json",
+      "camType": "locked"
     }
   ]
 }
