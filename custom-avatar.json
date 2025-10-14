@@ -13,15 +13,15 @@
     {
       "id": "CustomBellaAvatar",
       "name": "Bella Expression",
-      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Priya_2D.jpg",
+      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Neha_2D.jpg",
       "squareThumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-square-thumbnails/Priya_2D.jpg",
-      "configUrl": "https://trulience.com/conf/vba_bella1_exp_transition_gs.json",
+      "configUrl": "https://trulience.com/conf/vba_bella1_exp_transition.json",
       "camType": "locked"
     },
     {
       "id": "CustomBellaAvatar2",
       "name": "Bella Expression 2",
-      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Priya_2D.jpg",
+      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Alex_2D.jpg",
       "squareThumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-square-thumbnails/Priya_2D.jpg",
       "configUrl": "https://trulience.com/conf/vba_bella1_exp_transition_gs.json",
       "camType": "locked"
