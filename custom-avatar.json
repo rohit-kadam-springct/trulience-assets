@@ -11,19 +11,19 @@
   ],
   "vba": [
     {
-      "id": "CustomBellaAvatar",
-      "name": "Bella Expression",
-      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Neha_2D.jpg",
-      "squareThumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-square-thumbnails/Priya_2D.jpg",
-      "configUrl": "https://trulience.com/conf/vba_bella1_exp_transition.json",
+      "id": "VBA_April",
+      "name": "April",
+      "thumbnail": "https://digitalhuman.uk//home/assets/img/avatar-thumbnails/VBA_April.jpg",
+      "squareThumbnail": "https://digitalhuman.uk//home/assets/img/avatar-square-thumbnails/VBA_April.jpg",
+      "configUrl": "https://digitalhuman.uk//conf/vba_april.json",
       "camType": "locked"
     },
     {
-      "id": "CustomBellaAvatar2",
-      "name": "Bella Expression 2",
-      "thumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-thumbnails/Alex_2D.jpg",
-      "squareThumbnail": "https://www.digitalhuman.uk/home/assets/img/avatar-square-thumbnails/Priya_2D.jpg",
-      "configUrl": "https://trulience.com/conf/vba_bella1_exp_transition_gs.json",
+      "id": "VBA_Carmen",
+      "name": "Carmen",
+      "thumbnail": "https://digitalhuman.uk//home/assets/img/avatar-thumbnails/VBA_Carmen.jpg",
+      "squareThumbnail": "https://digitalhuman.uk//home/assets/img/avatar-square-thumbnails/VBA_Carmen.jpg",
+      "configUrl": "https://digitalhuman.uk//vba_carmen3.json",
       "camType": "locked"
     }
   ]
